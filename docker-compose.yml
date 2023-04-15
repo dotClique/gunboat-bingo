@@ -1,0 +1,10 @@
+version: "3.4"
+
+services:
+
+  db:
+    image: postgres:15.2-alpine3.17
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD?POSTGRES_PASSWORD not set}
+    ports:
+      - "5432:5432"
